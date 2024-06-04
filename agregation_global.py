@@ -260,7 +260,7 @@ def stock(model,tab):
         fichier.write(to_write)
         
 def preparation_data(model,dataFrame, name_option):
-    stock(datanalyse(dataFrame, name_option))
+    stock(model, datanalyse(dataFrame, name_option))
 
 def main(arg):
     model = "aggregations/"+arg
