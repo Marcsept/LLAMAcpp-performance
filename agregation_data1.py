@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri May 17 09:54:41 2024
+#==============================================================================
+# Script Name: main_test_try.sh
+# Description: Run all try of command
+# Author: Valère BILLAUD
+# Pseudonyme: Marcsept
+# Created: 2024-05-31 
+#==============================================================================
 
-@author: User
-"""
+
 
 import argparse
 import os

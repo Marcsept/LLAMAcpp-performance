@@ -32,9 +32,9 @@ threads () {
 
   try_option $outputs_path $inputs_path $model "-t 4" "thread4"
 
-  try_option $outputs_path $inputs_path $model "-t 8" "thread8"
+  #try_option $outputs_path $inputs_path $model "-t 8" "thread8"
 
-  try_option $outputs_path $inputs_path $model "-t 16" "thread16"
+  #try_option $outputs_path $inputs_path $model "-t 16" "thread16"
 
 
   python agregation_data1.py "outputs/${md}_test_input_${option}/outputs_log"

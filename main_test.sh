@@ -80,3 +80,7 @@ update_loading_bar $total_steps 15
 typical $model
 update_loading_bar $total_steps 16
 echo 
+
+echo -ne Start aggregation\r
+python agregation_global.py $model
+echo -ne 
