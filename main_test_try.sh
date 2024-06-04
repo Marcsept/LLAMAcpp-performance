@@ -10,7 +10,11 @@
 
 
 source src/test_input_try.sh
+model=$1
+param=$2
+option=$3
 
-
-try $model
+echo start
+#echo "try $model $param $option"
+try $model "$param" "$option"
 

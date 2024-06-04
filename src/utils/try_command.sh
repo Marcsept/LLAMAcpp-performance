@@ -30,7 +30,7 @@ try_option() {
   local output_res_file="$outputs_path/outputs_res/${filename}_${file_name}_res.txt"
   local output_log_file="$outputs_path/outputs_log/${filename}_${file_name}_log.txt"
 
-  echo "../llama.cpp/main.exe -m "$model" -s 987654321 "$command" --file "$input_file" -n 100 > "$output_res_file" 2> "$output_log_file""
+  #echo "../llama.cpp/main.exe -m "$model" -s 987654321 "$command" --file "$input_file" -n 100 > "$output_res_file" 2> "$output_log_file""
   # Command (main for googlecolab and main.exe for windows)
   ../llama.cpp/main -m "$model" -s 987654321 ${command} --file "$input_file" -n 100 > "$output_res_file" 2> "$output_log_file"
 done
