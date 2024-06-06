@@ -236,8 +236,6 @@ def datanalyse(df, name_option):
     step3_mean_total_time_token_per_seconde = [ 1000 / (float(x[0]) / float(x[1])) for x in step2_mean_total_time_token_per_seconde]
     for x in step3_mean_total_time_token_per_seconde :
         mean_total_time_token_per_seconde += x
-    print(mean_total_time_token_per_seconde)
-    print(step3_mean_total_time_token_per_seconde)
     if( mean_total_time_token_per_seconde == 0 ):
         mean_total_time_token_per_seconde = 0
     else :
