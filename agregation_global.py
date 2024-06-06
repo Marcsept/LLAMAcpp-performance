@@ -273,11 +273,7 @@ def main(arg):
 
     preparation_data(model,pd.read_csv(model+"_test_input_only_aggregation.csv", sep=';', encoding='latin1'), "without option")
 
-    #option type f32 in cache for K and V
-    df = pd.read_csv(model+"_test_input_ctv_ctk_aggregation.csv", sep=';', encoding='latin1')[pd.read_csv(model+"_test_input_ctv_ctk_aggregation.csv", sep=';', encoding='latin1')['name_'].apply(f32)]
-    name_option = "KV_f32"
-    preparation_data(model,df,name_option)
-
+   
     #option type f16 in cache for K and V
     df = pd.read_csv(model+"_test_input_ctv_ctk_aggregation.csv", sep=';', encoding='latin1')[pd.read_csv(model+"_test_input_ctv_ctk_aggregation.csv", sep=';', encoding='latin1')['name_'].apply(f16)]
     name_option = "KV_f16"
