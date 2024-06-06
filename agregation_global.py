@@ -32,11 +32,11 @@ def all_(string):
     return "_all_" in string
 
 def one(string):
-    return "_01_" in string
+    return "_001_" in string
 def ten(string):
-    return "_05_" in string
+    return "_01_" in string
 def thirty(string):
-    return "_99_" in string
+    return "_03_" in string
 
 
 def _mirostat1_br002_ent15(string):
@@ -108,7 +108,7 @@ def _128(string):
 def _all(string):
     return "_all_" in string
 
-def _1(string):
+def _1_(string):
     return "_1_" in string
 def _1_5(string):
     return "_1.5_" in string
@@ -170,7 +170,7 @@ def _np09_ns2_ps1(string):
 def _np09_ns2_ps2(string):
     return "_np09_ns2_ps2" in string
 
-def _0(string):
+def _0_(string):
     return "0_" in string
 def _0_5(string):
     return "05_" in string
@@ -538,7 +538,7 @@ def main(arg):
 
     csv=model+"_test_input_repeat_penalty_aggregation.csv"
     #option penalize repeat sequence of tokens : 1 (default : 1)
-    df = pd.read_csv(csv, sep=';', encoding='latin1')[pd.read_csv(csv, sep=';', encoding='latin1')['name_'].apply(_1)]
+    df = pd.read_csv(csv, sep=';', encoding='latin1')[pd.read_csv(csv, sep=';', encoding='latin1')['name_'].apply(_1_)]
     name_option = "repeat penalty : 1"
     preparation_data(model,df,name_option)
 
@@ -744,7 +744,7 @@ def main(arg):
 
     csv=model+"_test_input_temp_aggregation.csv"
     #option temp : 0 (default : 0.8)
-    df = pd.read_csv(csv, sep=';', encoding='latin1')[pd.read_csv(csv, sep=';', encoding='latin1')['name_'].apply(_0)]
+    df = pd.read_csv(csv, sep=';', encoding='latin1')[pd.read_csv(csv, sep=';', encoding='latin1')['name_'].apply(_0_)]
     name_option = "temp : 0"
     preparation_data(model,df,name_option)
 
@@ -760,21 +760,6 @@ def main(arg):
 
         
     csv=model+"_test_input_tfs_aggregation.csv"
-    #option tail free sampling : 0.1 (default : 1 disabled)
-    df = pd.read_csv(csv, sep=';', encoding='latin1')[pd.read_csv(csv, sep=';', encoding='latin1')['name_'].apply(_10)]
-    name_option = "tfs : 0.1"
-    preparation_data(model,df,name_option)
-
-    #option tail free sampling : 0.6 (default : 1 disabled)
-    df = pd.read_csv(csv, sep=';', encoding='latin1')[pd.read_csv(csv, sep=';', encoding='latin1')['name_'].apply(_60)]
-    name_option = "tfs : 0.6"
-    preparation_data(model,df,name_option)
-
-    #option tail free sampling : 0.8 (default : 1 disabled)
-    df = pd.read_csv(csv, sep=';', encoding='latin1')[pd.read_csv(csv, sep=';', encoding='latin1')['name_'].apply(_80)]
-    name_option = "tfs : 0.8"
-    preparation_data(model,df,name_option)
-
     #option tail free sampling : 0.9 (default : 1 disabled)
     df = pd.read_csv(csv, sep=';', encoding='latin1')[pd.read_csv(csv, sep=';', encoding='latin1')['name_'].apply(_90)]
     name_option = "tfs : 0.9"
