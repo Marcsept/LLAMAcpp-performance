@@ -1,0 +1,4 @@
+-np 0.1 -ns 2 -ps 1/np01_ns2_ps1
+-np 0.9 -ns 10 -ps 1/np09_ns10_ps1
+-np 0.1 -ns 2 -ps 0.2/np01_ns2_ps0.2
+-np 0.9 -ns 10 -ps 0.2/np09_ns10_ps0.2

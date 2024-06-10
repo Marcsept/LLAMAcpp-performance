@@ -1,0 +1,3 @@
+--temp 0/temp0
+--temp 0.5/temp05
+--temp 5/temp5

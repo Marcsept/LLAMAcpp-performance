@@ -1,0 +1,2 @@
+--repeat_penalty 1/repeat_penalty_1
+--repeat_penalty 1.5/repeat_penalty_1.5

@@ -1,0 +1,4 @@
+--mirostat 1 --mirostat-lr 0.5 --mirostat-ent 2/mirostat1_br05_ent2
+--mirostat 1 --mirostat-lr 0.02 --mirostat-ent 8/mirostat1_br002_ent8
+--mirostat 2 --mirostat-lr 0.5 --mirostat-ent 2/mirostat2_br05_ent2
+--mirostat 2 --mirostat-lr 0.02 --mirostat-ent 8/mirostat2_br002_ent8

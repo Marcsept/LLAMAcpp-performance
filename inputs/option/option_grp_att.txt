@@ -1,0 +1,3 @@
+-gan 2/grp_att_n
+-gaw 256/grp_att_w
+-gan 2 -gaw 256/grp_att_w_n
