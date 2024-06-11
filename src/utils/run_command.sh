@@ -20,7 +20,7 @@ try_option() {
 
 
 
-  for input_file in "$inputs_path"/*; do
+  for input_file in "$inputs_path"/*.txt; do
     
     local filename=$(basename -- "$input_file")
     local filename="${filename%.*}"
@@ -33,7 +33,7 @@ try_option() {
     
     #echo "../llama.cpp/main.exe -m "$model" -s 987654321 "$command" --file "$input_file" -n 100 > "$output_res_file" 2> "$output_log_file""
     # Command (main for googlecolab and main.exe for windows)
-    ../llama.cpp/main -m "$model" -s 987654321 ${command} --file "$input_file" -n 100 > "$output_res_file" 2> "$output_log_file"
+    ../llama.cpp/main -m "$model" -s 987654321 ${command} --file "$input_file" -n 10 > "$output_res_file" 2> "$output_log_file"
 
     source_dir="../State"
     destination_dir=$output_state_file

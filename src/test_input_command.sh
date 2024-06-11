@@ -15,7 +15,7 @@ source src/utils/run_command.sh
 md=$1
 option1=$2
 option2=$3
-outputs_path="outputs/"${md}"_test_input_${option1}"
+outputs_path="outputs/"${md}"_test_input_${option2}"
 inputs_path="inputs"
 model="models/""${md}"".gguf"
 

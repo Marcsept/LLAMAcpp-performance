@@ -72,7 +72,7 @@ def extract_data(fichier) :
 def main():
     out = ""
     if not os.path.exists("aggregations/total_data.csv"):
-        os.makedirs("aggregations/total_data.csv")
+        #os.makedirs("aggregations/total_data.csv")
         colone = [
         'load_time',
         'sample_time', 'ms_per_token','token_per_sec',
