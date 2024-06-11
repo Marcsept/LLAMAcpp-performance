@@ -29,12 +29,22 @@ try_option() {
     # define outputs files
     local output_res_file="$outputs_path/outputs_res/${filename}_${file_name}_res.txt"
     local output_log_file="$outputs_path/outputs_log/${filename}_${file_name}_log.txt"
-
+    local output_state_file="${outputs_path}/outputs_state/${filename}_${file_name}_state"
+    
     #echo "../llama.cpp/main.exe -m "$model" -s 987654321 "$command" --file "$input_file" -n 100 > "$output_res_file" 2> "$output_log_file""
     # Command (main for googlecolab and main.exe for windows)
     ../llama.cpp/main -m "$model" -s 987654321 ${command} --file "$input_file" -n 100 > "$output_res_file" 2> "$output_log_file"
 
-    python move_state.py "$outputs_path/outputs_state/" "$inputs_file"
+    source_dir="../State"
+    destination_dir=$output_state_file
+
+    # Créer le répertoire de destination s'il n'existe pas
+    mkdir -p "$destination_dir"
+
+    # Déplacer tous les fichiers du répertoire source vers le répertoire de destination
+    mv "$source_dir"/* "$destination_dir"
+
+    #python move_state.py "${outputs_path}/outputs_state/" "$inputs_file"
 
   done
 

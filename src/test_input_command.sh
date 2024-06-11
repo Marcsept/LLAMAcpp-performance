@@ -26,12 +26,12 @@ mkdir -p "$outputs_path/outputs_log"
 mkdir -p "$outputs_path/outputs_state"
 
 
-try_option $outputs_path $inputs_path $model $option2 $option1
+try_option "$outputs_path" "$inputs_path" "$model" "$option1" "$option2"
 
 #Todo new aggregation 
  
  
-python agregation_data.py "outputs/${md}_test_input_${option}/outputs_log"
+python agregation_data.py "outputs/${md}_test_input_${option2}/outputs_log"
 
 
 

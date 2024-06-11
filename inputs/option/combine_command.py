@@ -34,7 +34,7 @@ for name_fichier in fichiers_txt:
     set1_name=[x.split("/")[1] for x in line_content]
     final_set, final_set_name = combine(set1, set1_name, final_set, final_set_name)
     print(name_fichier)
-to_write="option;option_name\n;only\n"
+to_write="option;option_name\n ;only\n"
 with open("options.csv", "w") as f:
     f.write(to_write)
     for i in range(len(final_set)):

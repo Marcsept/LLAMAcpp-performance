@@ -41,7 +41,7 @@ for i in range(len(fichiers_txt)):
     #final_set, final_set_name = final_set +  set1, final_set_name + set1_name 
     
     print(fichiers_txt[i])
-to_write="option;option_name\n;only\n"
+to_write="option;option_name\n ;only\n"
 with open("2options.csv", "w") as f:
     f.write(to_write)
     for i in range(len(final_set)):
