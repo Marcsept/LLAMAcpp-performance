@@ -34,7 +34,7 @@ try_option() {
     # Command (main for googlecolab and main.exe for windows)
     ../llama.cpp/main -m "$model" -s 987654321 ${command} --file "$input_file" -n 100 > "$output_res_file" 2> "$output_log_file"
 
-    python move_state.py "$outputs_path/outputs_state/" $inputs_file
+    python move_state.py "$outputs_path/outputs_state/" "$inputs_file"
 
   done
 
