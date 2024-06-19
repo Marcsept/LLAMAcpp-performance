@@ -52,20 +52,38 @@ def extract_data(fichier) :
                         out.append(value_at_add)
 
             return out
-            
-            
-            
-            
-            
-            
-            
-            
     except FileNotFoundError:
         print(f"Le fichier {fichier} n'a pas été trouvé.")
     except IOError:
         print(f"Erreur lors de la lecture du fichier {fichier}.")
     
-    return 1
+    return 1       
+        
+def extract_data_mul_mat(fichier) :
+    out = []
+    name = fichier.split("/")[-1][:-4]
+    try:
+        with open(fichier, 'r', encoding='utf-8') as file:
+            contenu = file.read()
+            #print(contenu)
+            
+            contenu_ligne = contenu.split("\n")
+            for line in contenu_ligne: 
+                line_split = line.split()
+                if("Multiplication Mat" in line_split):
+                    out += name + ";" + line_split[-5] + ";" + line_split[-3] + ";" + line_split[-1]+ "\n"
+            return out       
+    except FileNotFoundError:
+        print(f"Le fichier {fichier} n'a pas été trouvé.")
+    except IOError:
+        print(f"Erreur lors de la lecture du fichier {fichier}.")
+    
+    return 1      
+            
+            
+            
+            
+    
 
 
 
@@ -95,18 +113,25 @@ def main():
     args = parser.parse_args()
     
     # Liste pour stocker les noms de fichiers .txt
-    fichiers_txt = []
     
-    # Parcourir le dossier donné
+    # Parcourir le dossier donné (Log run time)
     for fichier in os.listdir(str(args.Path)):
         if fichier.endswith('.txt'):
-            fichiers_txt.append(fichier)
             tab_data = extract_data(args.Path + "/" + fichier)
             for i in range(len(tab_data)-1):
                 out += tab_data[i] + ";"
             out+= tab_data[-1] +";"
             out+= fichier + "\n"
     with open("aggregations/total_data.csv", "a") as f:
+        f.write(out)
+    
+    # Parcourir le dossier donné (optain mul mat information
+    out = "name;res;mul1;mul2\n"
+    for fichier in os.listdir(str(args.Path)):
+        if fichier.endswith('.txt'):
+            tab_data = extract_data_mul_mat(args.Path + "/" + fichier)
+            out+= tab_data
+    with open("aggregations/total_data_mul_mat.csv", "a") as f:
         f.write(out)
     
 

@@ -35,17 +35,7 @@ try_option() {
     # Command (main for googlecolab and main.exe for windows)
     ../llama.cpp/main -m "$model" -s 987654321 ${command} --file "$input_file" -n 10 > "$output_res_file" 2> "$output_log_file"
 
-    source_dir="../State"
-    destination_dir=$output_state_file
-
-    # Créer le répertoire de destination s'il n'existe pas
-    mkdir -p "$destination_dir"
-
-    # Déplacer tous les fichiers du répertoire source vers le répertoire de destination
-    mv "$source_dir"/* "$destination_dir"
-
-    #python move_state.py "${outputs_path}/outputs_state/" "$inputs_file"
-
+    
   done
 
 }
