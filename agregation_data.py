@@ -59,26 +59,7 @@ def extract_data(fichier) :
     
     return 1       
         
-def extract_data_mul_mat(fichier) :
-    out = ""
-    name = fichier.split("/")[-1][:-8]
-    try:
-        with open(fichier, 'r', encoding='utf-8') as file:
-            contenu = file.read()
-            #print(contenu)
-            
-            contenu_ligne = contenu.split("\n")
-            for line in contenu_ligne: 
-                line_split = line.split()
-                if("Multiplication Mat" in line):
-                    out += name + " ; " + line_split[-5] + " ; " + line_split[-3] + " ; " + line_split[-1]+ "\n"
-            return out       
-    except FileNotFoundError:
-        print(f"Le fichier {fichier} n'a pas été trouvé.")
-    except IOError:
-        print(f"Erreur lors de la lecture du fichier {fichier}.")
-    
-    return 1      
+   
             
             
             
@@ -125,14 +106,7 @@ def main():
     with open("aggregations/total_data.csv", "a") as f:
         f.write(out)
     
-    # Parcourir le dossier donné (optain mul mat information
-    out = "" #"name ; res ; mul1 ; mul2\n
-    for fichier in os.listdir(str(args.Path)):
-        if fichier.endswith('.txt'):
-            tab_data = extract_data_mul_mat(args.Path + "/" + fichier)
-            out+= tab_data
-    with open("aggregations/total_data_mul_mat.csv", "a") as f:
-        f.write(out)
+    
     
 
 if __name__ == '__main__':

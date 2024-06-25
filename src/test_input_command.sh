@@ -23,7 +23,7 @@ echo $option
 # Create file if doesn't exist
 mkdir -p "$outputs_path/outputs_res"
 mkdir -p "$outputs_path/outputs_log"
-mkdir -p "$outputs_path/outputs_state"
+
 
 
 try_option "$outputs_path" "$inputs_path" "$model" "$option1" "$option2"
@@ -32,6 +32,6 @@ try_option "$outputs_path" "$inputs_path" "$model" "$option1" "$option2"
  
  
 python agregation_data.py "outputs/${md}_test_input_${option2}/outputs_log"
-
+python neural_network.py "outputs/${md}_test_input_${option2}/outputs_log"
 
 
