@@ -32,7 +32,4 @@ try_option "$outputs_path" "$inputs_path" "$model" "$option1" "$option2"
  
 echo "start agregation"
 python agregation_data.py "outputs/${md}_test_input_${option2}/outputs_log"
-echo "start copy NN weigths"
-cp "../llama.cpp/weights.csv" "aggregations/NeuralNetwork/${md}/${option2}"
-echo "remove"
-rm "../llama.cpp/weights.csv" 
+
