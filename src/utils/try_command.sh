@@ -17,6 +17,7 @@ try_option() {
   local model=""$3 
   local command=$4
   local file_name=$5
+  local path_weight=$6
 
 
 
@@ -32,7 +33,16 @@ try_option() {
 
   #echo "../llama.cpp/main.exe -m "$model" -s 987654321 "$command" --file "$input_file" -n 100 > "$output_res_file" 2> "$output_log_file""
   # Command (main for googlecolab and main.exe for windows)
-  ../llama.cpp/main -m "$model" -s 987654321 ${command} --file "$input_file" -n 100 > "$output_res_file" 2> "$output_log_file"
+  ../llama.cpp/main -m "$model" -s 987654321 ${command} --file "$input_file" -n 10 > "$output_res_file" 2> "$output_log_file"
+
+  echo "start copy NN weigths"
+  ls ../llama.cpp/weights.csv
+  ls ${path_weight}
+  cp "../llama.cpp/weights.csv" ${path_weight}
+  echo "remove"
+  rm "../llama.cpp/weights.csv" 
+
+
 done
 
 }

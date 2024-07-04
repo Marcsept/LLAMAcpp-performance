@@ -23,7 +23,7 @@ echo $option
 # Create file if doesn't exist
 mkdir -p "$outputs_path/outputs_res"
 mkdir -p "$outputs_path/outputs_log"
-
+mkdir -p "aggregations/NeuralNetwork/${md}/${option2}"
 
 echo "Start inference"
 try_option "$outputs_path" "$inputs_path" "$model" "$option1" "$option2"
@@ -32,8 +32,7 @@ try_option "$outputs_path" "$inputs_path" "$model" "$option1" "$option2"
  
 echo "start agregation"
 python agregation_data.py "outputs/${md}_test_input_${option2}/outputs_log"
-echo "start get NN"
-python neural_network.py "outputs/${md}_test_input_${option2}/outputs_log"
-
+echo "start copy NN weigths"
+cp "../llama.cpp/weights.csv" "aggregations/NeuralNetwork/${md}/${option2}"
 echo "remove"
-rm -r "outputs/${md}_test_input_${option2}/outputs_log" 
+rm "../llama.cpp/weights.csv" 
