@@ -17,7 +17,7 @@ try_option() {
   local model=""$3 
   local command=$4
   local file_name=$5
-
+  local path_weight=$6
 
 
   for input_file in "$inputs_path"/*.txt; do
