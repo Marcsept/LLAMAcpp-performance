@@ -30,6 +30,6 @@ try_option "$outputs_path" "$inputs_path" "$model" "$option1" "$option2" "aggreg
 
 #Todo new aggregation 
  
-echo "start agregation"
+
 python agregation_data.py "outputs/${md}_test_input_${option2}/outputs_log"
 
