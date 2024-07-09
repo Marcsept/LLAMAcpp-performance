@@ -53,7 +53,7 @@ for i in range(len(fichiers_txt)):
     
     print(fichiers_txt[i])
 to_write="option;option_name\n ;only\n"
-with open("3options.csv", "w") as f:
+with open("options.csv", "a") as f:
     f.write(to_write)
     for i in range(len(final_set)):
         f.write(final_set[i]+";"+final_set_name[i]+"\n")
