@@ -25,7 +25,7 @@ mkdir -p "$outputs_path/outputs_res"
 mkdir -p "$outputs_path/outputs_log"
 mkdir -p "aggregations/NeuralNetwork/${md}/${option2}"
 
-echo "Start inference"
+
 try_option "$outputs_path" "$inputs_path" "$model" "$option1" "$option2" "aggregations/NeuralNetwork/${md}/${option2}"
 
 #Todo new aggregation 
