@@ -1,2 +1,1 @@
  -ctk f16 -ctv f16 /ctk_f16_ctv_f16
- -ctk f32 -ctv f32 /ctk_f32_ctv_f32
