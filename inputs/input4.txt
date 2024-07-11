@@ -1,1 +1,6 @@
-Can you provide an analysis of the key factors that led to the fall of the Roman Empire?
+What European soccer team won the Champions League the year Barcelona hosted the Olympic games?
+
+Use this format:
+
+Q: <repeat_question>
+A: Lets think step by step. <give_reasoning> Therefore, the answer is <final_answer>.

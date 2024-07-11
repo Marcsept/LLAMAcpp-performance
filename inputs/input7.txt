@@ -1,0 +1,11 @@
+The following is an example of how to compute parity for a list
+Q: What is the parity on the list a=[1, 1, 0, 1, 0]?
+A: We initialize s=
+a=[1, 1, 0, 1, 0]. The first element of a is 1 so b=1. s = s + b = 0 + 1 = 1. s=1.
+a=[1, 0, 1, 0]. The first element of a is 1 so b=1. s = s + b = 1 + 1 = 0. s=0.
+a=[0, 1, 0]. The first element of a is 0 so b=0. s = s + b = 0 + 0 = 0. s=0.
+a=[1, 0]. The first element of a is 1 so b=1. s = s + b = 0 + 1 = 1. s=1.
+a=[0]. The first element of a is 0 so b=0. s = s + b = 1 + 0 = 1. s=1.
+a=[] is empty. Since the list a is empty and we have s=1, the parity is 1
+
+Given that definition, what would be the parity of this other list b= [0, 1, 1, 0, 0, 0, 0, 0]
