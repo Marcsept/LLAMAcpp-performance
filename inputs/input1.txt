@@ -1,1 +1,10 @@
-How should I write my college admission essay? Give me suggestions about the different sections I should include, what tone I should use, and what expressions I should avoid.
+This is the instruction to understand a graph who represent a Tree plantation with irrigation. 
+Node name Pumps with 3 positional variable and a pressur value (example Pumps1[X,Y,Z,P])
+Node Pumps0 have always X=0, Y=0 and Z=0
+Node Pumps have 1 output and 0 input 
+Node name Tree (example Tree0[X,Y,Z])
+Node must have 1 inputs and 0 or 1 output 
+Edge are a pip with a Pression consumption to move the water between two node example “- (Pc)>
+Two identifiers separated by a ‘->’  describe a graph  example (a -> b) 
+
+Give an example of graph without other informations just a graph with 1 Pumps and 4 align Trees

@@ -1,1 +1,0 @@
-Write a poem describing a beautify day <|endofprompt|>. It was a beautiful winter day

@@ -1,6 +1,1 @@
-What European soccer team won the Champions League the year Barcelona hosted the Olympic games?
-
-Use this format:
-
-Q: <repeat_question>
-A: Lets think step by step. <give_reasoning> Therefore, the answer is <final_answer>.
+Rewrite question with the scope of drip irrigation and add the possibility to give contrast or more solution in the answer, but finally just rewrite the quesiton. How do you water the trees with those holey pipes, and is it good to put a lot of water all the time to make them grow faster?
